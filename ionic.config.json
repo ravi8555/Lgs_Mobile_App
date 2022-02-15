@@ -1,0 +1,7 @@
+{
+  "name": "logicseve_V1_Sh",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

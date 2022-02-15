@@ -1,0 +1,11 @@
+.blog-card-title{
+  font-size:20px;
+}
+.category-container{
+  padding: 10px;
+  overflow-x: auto;
+  display: flex;
+  .cat-btn{
+    margin-right: 12px;
+  }
+}

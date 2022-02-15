@@ -1,0 +1,127 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-no-padding">
+      <div class="tool-title">
+        <img class="logo" src="../../assets/images/logo.jpg" alt="">
+          <div class="title"> Logicserve Digital</div>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+  <ion-footer>
+    <ion-toolbar class="position-relative">
+      <ion-searchbar placeholder="search" animated></ion-searchbar>
+      <ion-buttons slot="end" class="insearch-icon">
+        <ion-button>
+          <ion-icon slot="start" size="large" name="mic-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-row class="top-card ion-margin-bottom">
+    <ion-col size="6">
+      <ion-card class="creative-card" style="--background:#F15A22" routerLink="/news" >
+        <div class="icon">
+          <ion-icon name="accessibility-outline" color="white"></ion-icon>
+        </div>
+        <div class="text">MEDIA</div>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card class="creative-card" style="--background:#FDB913" routerLink="/creative">
+        <div class="icon">
+          <ion-icon name="accessibility-outline" color="white"></ion-icon>
+        </div>
+        <div class="text">CREATIVE</div>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card class="creative-card" style="--background:#00AAAD" routerLink="/data-inside">
+        <div class="icon">
+          <ion-icon name="accessibility-outline" color="white"></ion-icon>
+        </div>
+        <div class="text">DATA & InSIDE</div>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card class="creative-card" style="--background:#034EA2" routerLink="/technology">
+        <div class="icon">
+          <ion-icon name="accessibility-outline" color="white"></ion-icon>
+        </div>
+        <div class="text">TECHNOLOGY</div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <div class="blog-container ion-margin-top">
+    <div class="title-container">
+      <div class="title">In the <span> Spotlight</span></div>
+      <!-- <div class="btn"><ion-button class="seeall"  fill="clear">See All</ion-button></div> -->
+    </div>
+    <swiper [config]="config" #swiperSpotlight (swiper)="onSwiper($event)" (slideChange)="onSlideChange()"
+      class="blog-slider">
+      <ng-template swiperSlide *ngFor="let slide of Spotlight; index as i">
+        <ion-card class="sport-card">
+          <ion-row>
+            <ion-col size="6">
+              <ion-img [src]="slide.userImg"></ion-img>
+            </ion-col>
+            <ion-col size="6">
+              <ion-img [src]="slide.awardImg" alt=""></ion-img>
+            </ion-col>
+          </ion-row>
+          <p class="text" [innerHTML]="slide.content"></p>
+        </ion-card>
+      </ng-template>
+    </swiper>
+    </div>
+    <div class="blog-container ion-margin-top">
+      <div class="title-container">
+        <div class="title">Awards <span>&amp; Recognitions</span></div>
+        <!-- <div class="btn"><ion-button class="seeall"  fill="clear">See All</ion-button></div> -->
+      </div>
+    <swiper [config]="config" #swiperAwards (swiper)="onSwiper($event)" (slideChange)="onSlideChange()"
+      class="blog-slider">
+      <ng-template swiperSlide *ngFor="let slide of awardsArr; index as i">
+        <ion-card class="sport-card">
+          <ion-row>
+            <ion-col size="6">
+              <ion-img class="awardImg" [src]="slide.orgImg"></ion-img>
+            </ion-col>
+            <ion-col size="6">
+              <ion-img class="awardImg" [src]="slide.awardImg" alt=""></ion-img>
+            </ion-col>
+          </ion-row>
+          <p class="text" [innerHTML]="slide.content"></p>
+        </ion-card>
+      </ng-template>
+    </swiper>
+  </div>
+  <!-- <div class="blog-container ion-margin-top">
+    <div class="title-container">
+      <div class="title">News <span>&amp; Recognitions</span></div>
+    </div>
+  <swiper [config]="config" #swiperAwards (swiper)="onSwiper($event)" (slideChange)="onSlideChange()"
+    class="blog-slider">
+    <ng-template swiperSlide *ngFor="let slide of awardsArr; index as i">
+      <ion-card class="sport-card">
+        <ion-row>
+          <ion-col size="6">
+            <ion-img class="awardImg" [src]="slide.orgImg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img class="awardImg" [src]="slide.awardImg" alt=""></ion-img>
+          </ion-col>
+        </ion-row>
+        <p class="text" [innerHTML]="slide.content"></p>
+      </ion-card>
+    </ng-template>
+  </swiper>
+</div> -->
+  <!-- news btn temprrary -->
+
+  
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> -->
+    <ion-title>Survey</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="category-container">
+    <ion-button class="cat-btn" shape="round" size="small" color="primary" (click)="showNews(cat)" *ngFor="let cat of categoryType; index as i">{{cat}}</ion-button>
+  </div>
+  <ion-card class="blog-card" (click)="gotoIndivPage(data)">
+    <ion-img class="awardImg" src="https://www.logicserve.com/blog/wp-content/uploads/2022/01/Blog_Post_31thjan-807x422.jpg"></ion-img>
+    <ion-card-header>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      <ion-card-title class="blog-card-title">6 PPC Strategies You Cannot Ignore in 2022</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>PPC campaigns are essential to marketing and advertising strategies. Read the latest PPC trends and top paid online advertising trends for 2022!
+    </ion-card-content>
+  </ion-card>
+</ion-content>

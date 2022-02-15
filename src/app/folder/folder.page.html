@@ -1,0 +1,213 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button ></ion-menu-button>
+      </ion-buttons>
+    <!-- <ion-title>{{ folder }} Logic Serve</ion-title> -->
+
+      <ion-title class="ion-no-padding">
+        <div class="tool-title"> <img class="logo" src="../../assets/images/logo.jpg" alt="">
+        <div class="title"> Logicserve Digital</div></div></ion-title>
+  </ion-toolbar>
+  <ion-footer>
+    <ion-toolbar class="position-relative">
+      <!-- <ion-title> -->
+      <ion-searchbar placeholder="search"  animated></ion-searchbar>
+    <!-- </ion-title> -->
+      <!-- <ion-menu-button></ion-menu-button> -->
+      <!-- <ion-menu-button></ion-menu-button> -->
+      <!-- <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button> -->
+      <!-- <ion-icon class="insearch-icon" name="mic-outline"></ion-icon> -->
+      <ion-buttons slot="end" class="insearch-icon">
+        <ion-button>
+          <ion-icon slot="start" size="large" name="mic-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+
+
+  <ion-row class="top-card ion-margin-bottom">
+    <ion-col size="6" >
+     
+    
+          <ion-card class="creative-card" style="--background:#F15A22">
+            <div class="icon">
+              <ion-icon name="accessibility-outline" color="white"></ion-icon>
+            </div>
+            <div class="text">MEDIA</div>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card class="creative-card" style="--background:#FDB913">
+            <div class="icon">
+              <ion-icon name="accessibility-outline" color="white"></ion-icon>
+            </div>
+            <div class="text">CREATIVE</div>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card class="creative-card" style="--background:#00AAAD">
+            <div class="icon">
+              <ion-icon name="accessibility-outline" color="white"></ion-icon>
+            </div>
+            <div class="text">DATA & InSIDE</div>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card class="creative-card" style="--background:#034EA2">
+            <div class="icon">
+              <ion-icon name="accessibility-outline" color="white"></ion-icon>
+            </div>
+            <div class="text">TECHNOLOGY</div>
+          </ion-card>
+        </ion-col>
+       </ion-row>
+
+<div class="blog-container ion-margin-top">
+  <div class="title-container">
+    <div class="title">In the <span> Spotlight</span></div>
+    <!-- <div class="btn"><ion-button class="seeall"  fill="clear">See All</ion-button></div> -->
+  </div>
+  <swiper [config]="config"
+  (swiper)="onSwiper($event)"
+  (slideChange)="onSlideChange()"  class="blog-slider">
+      <ng-template swiperSlide  *ngFor="let slide of Spotlight; index as i">
+        <ion-card class="sport-card">
+          <ion-row>
+            <ion-col size="6">
+              <ion-img src="../../assets/images/spotlight-rt-1.jpg"></ion-img>
+            </ion-col>
+            <ion-col size="6">
+              <ion-img src="../../assets/images/spotlight-lt-1.jpg" alt=""></ion-img>
+            </ion-col>
+            </ion-row>
+            <p class="text ">Our Founder &amp; CEO, Prasad Shejale was featured in <b>‘Impact Digital Power 100 2020: Digital Leaders.’</b></p>
+        </ion-card>
+      </ng-template>
+      <ng-template swiperSlide>
+        <ion-card class="sport-card">
+          <ion-row>
+            <ion-col size="6">
+              <ion-img src="../../assets/images/spotlight-rt-2.jpg"></ion-img>
+            </ion-col>
+            <ion-col size="6">
+              <ion-img src="../../assets/images/spotlight-lt-2.jpg" alt=""></ion-img>
+            </ion-col>
+            </ion-row>
+            <p class="text">Our COO, Rupak Ved was featured in <b>'Agency Reporter 40 Under 40'</b> for the year 2020.</p>
+        </ion-card>
+      </ng-template>
+      <ng-template swiperSlide>
+        <ion-card class="sport-card">
+          <ion-row>
+            <ion-col size="6">
+              <ion-img src="../../assets/images/spotlight-rt-2.jpg"></ion-img>
+            </ion-col>
+            <ion-col size="6">
+              <ion-img src="../../assets/images/spotlight-lt-2.jpg" alt=""></ion-img>
+            </ion-col>
+            </ion-row>
+            <p class="text">Our COO, Rupak Ved was featured in <b>'Agency Reporter 40 Under 40'</b> for the year 2020.</p>
+        </ion-card>
+      </ng-template>
+    </swiper>
+  <!-- <ion-slides pager="true" [options]="slideBlog" class="blog-slider">
+    <ion-slide>
+      <ion-card class="sport-card">
+        <ion-row>
+          <ion-col size="6">
+            <ion-img src="../../assets/images/spotlight-rt-1.jpg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img src="../../assets/images/spotlight-lt-1.jpg" alt=""></ion-img>
+          </ion-col>
+          </ion-row>
+          <p class="text ">Our Founder &amp; CEO, Prasad Shejale was featured in <b>‘Impact Digital Power 100 2020: Digital Leaders.’</b></p>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="sport-card">
+        <ion-row>
+          <ion-col size="6">
+            <ion-img src="../../assets/images/spotlight-rt-2.jpg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img src="../../assets/images/spotlight-lt-2.jpg" alt=""></ion-img>
+          </ion-col>
+          </ion-row>
+          <p class="text">Our COO, Rupak Ved was featured in <b>'Agency Reporter 40 Under 40'</b> for the year 2020.</p>
+      </ion-card>
+    </ion-slide>
+    </ion-slides> -->
+
+</div>
+    <!-- <div id="container">
+    <strong class="capitalize">{{ folder }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nam nesciunt maiores tenetur dolorum, quod nobis. Aut quia magni placeat accusantium nostrum laudantium repellat nam dolorum facere. Ipsa, sequi corporis?
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eos veritatis praesentium enim soluta quasi optio dolores asperiores libero, saepe sed minus ut fuga reiciendis. Blanditiis nulla nisi, nesciunt mollitia odit impedit dolore repellendus, cum perspiciatis voluptas nam voluptate eligendi autem. Quia voluptates quasi maxime sunt! Eius repellat voluptatem error? Quae quisquam animi ab nesciunt tempore aspernatur modi eos eum, beatae iure, at consequuntur commodi provident corrupti perferendis vero officiis dolorem minus, quidem maiores assumenda natus culpa recusandae! Cum ducimus illum molestiae quasi dolorem nemo, iusto quibusdam sequi ipsa molestias eos alias aut quod nulla quam voluptas atque, aperiam accusamus?
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- <swiper
+      [slidesPerView]="3"
+      [spaceBetween]="50"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange()"
+    >
+      <ng-template swiperSlide>
+        <img src="../../assets/shapes.svg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="../../assets/shapes.svg" alt="">
+
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="../../assets/shapes.svg" alt="">
+
+      </ng-template>
+    </swiper> -->
+    <!-- <swiper
+    >
+
+      <ng-template swiperSlide>Slide 1</ng-template>
+      <ng-template swiperSlide>Slide 2</ng-template>
+      <ng-template swiperSlide>Slide 3</ng-template>
+      <ng-template swiperSlide>Slide 4</ng-template>
+      <ng-template swiperSlide>Slide 5</ng-template>
+      <ng-template swiperSlide>Slide 6</ng-template>
+    </swiper> -->
+    <!-- <swiper>
+      <swiper-slide>Slide 1</swiper-slide>
+      <swiper-slide>Slide 3</swiper-slide>
+      <swiper-slide>Slide 3</swiper-slide>
+    </swiper> -->
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nam nesciunt maiores tenetur dolorum, quod nobis. Aut quia magni placeat accusantium nostrum laudantium repellat nam dolorum facere. Ipsa, sequi corporis?
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eos veritatis praesentium enim soluta quasi optio dolores asperiores libero, saepe sed minus ut fuga reiciendis. Blanditiis nulla nisi, nesciunt mollitia odit impedit dolore repellendus, cum perspiciatis voluptas nam voluptate eligendi autem. Quia voluptates quasi maxime sunt! Eius repellat voluptatem error? Quae quisquam animi ab nesciunt tempore aspernatur modi eos eum, beatae iure, at consequuntur commodi provident corrupti perferendis vero officiis dolorem minus, quidem maiores assumenda natus culpa recusandae! Cum ducimus illum molestiae quasi dolorem nemo, iusto quibusdam sequi ipsa molestias eos alias aut quod nulla quam voluptas atque, aperiam accusamus?aperiam accusamus?
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nam nesciunt maiores tenetur dolorum, quod nobis. Aut quia magni placeat accusantium nostrum laudantium repellat nam dolorum facere. Ipsa, sequi corporis?
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eos veritatis praesentium enim soluta quasi optio dolores asperiores libero, saepe sed minus ut fuga reiciendis. Blanditiis nulla nisi, nesciunt mollitia odit impedit dolore repellendus, cum perspiciatis voluptas nam voluptate eligendi autem. Quia voluptates quasi maxime sunt! Eius repellat voluptatem error? Quae quisquam animi ab nesciunt tempore aspernatur modi eos eum, beatae iure, at consequuntur commodi provident corrupti perferendis vero officiis dolorem minus, quidem maiores assumenda natus culpa recusandae! Cum ducimus illum molestiae quasi dolorem nemo, iusto quibusdam sequi ipsa molestias eos alias aut quod nulla quam voluptas atque, aperiam accusamus?
+
+</ion-content>
