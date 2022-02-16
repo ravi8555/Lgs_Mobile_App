@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { TechnologyPage } from './technology.page';
+import { LeftPanelCComponent } from './left-panel-c.component';
 
-describe('TechnologyPage', () => {
-  let component: TechnologyPage;
-  let fixture: ComponentFixture<TechnologyPage>;
+describe('LeftPanelCComponent', () => {
+  let component: LeftPanelCComponent;
+  let fixture: ComponentFixture<LeftPanelCComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TechnologyPage ],
+      declarations: [ LeftPanelCComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TechnologyPage);
+    fixture = TestBed.createComponent(LeftPanelCComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

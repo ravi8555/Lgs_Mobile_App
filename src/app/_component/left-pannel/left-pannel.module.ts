@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CREATIVEPageRoutingModule } from './creative-routing.module';
+import { LeftPannelPageRoutingModule } from './left-pannel-routing.module';
 
-import { CREATIVEPage } from './creative.page';
+import { LeftPannelPage } from './left-pannel.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CREATIVEPageRoutingModule
+    LeftPannelPageRoutingModule
   ],
-  declarations: [CREATIVEPage]
+  declarations: [LeftPannelPage]
 })
-export class CREATIVEPageModule {}
+export class LeftPannelPageModule {}

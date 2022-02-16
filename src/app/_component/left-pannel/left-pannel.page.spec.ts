@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { MediaPage } from './media.page';
+import { LeftPannelPage } from './left-pannel.page';
 
-describe('MediaPage', () => {
-  let component: MediaPage;
-  let fixture: ComponentFixture<MediaPage>;
+describe('LeftPannelPage', () => {
+  let component: LeftPannelPage;
+  let fixture: ComponentFixture<LeftPannelPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MediaPage ],
+      declarations: [ LeftPannelPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MediaPage);
+    fixture = TestBed.createComponent(LeftPannelPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

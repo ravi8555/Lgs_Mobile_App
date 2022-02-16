@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DataInsidePage } from './data-inside.page';
+import { LeftPannelPage } from './left-pannel.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: DataInsidePage
+    component: LeftPannelPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DataInsidePageRoutingModule {}
+export class LeftPannelPageRoutingModule {}

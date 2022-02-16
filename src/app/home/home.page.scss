@@ -51,8 +51,8 @@
       
     }
     ion-icon {
-      color: blue;
-      font-size: 28px;
+      font-size: 22px;
+      fill: #fff;
     }
     .text{
       color: #fff;
@@ -72,6 +72,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 12px;
+    margin-top: 32px;
     .title{
       font-size: 18px;
       font-weight: 500;

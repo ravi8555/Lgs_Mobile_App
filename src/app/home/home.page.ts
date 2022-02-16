@@ -105,21 +105,21 @@ export class HomePage implements OnInit {
     autoplay: true,
   };
   onSwiper(swiper) {
-    console.log(swiper);
+    // console.log(swiper);
   }
   onSlideChange() {
-    console.log('slide change');
+    // console.log('slide change');
   }
 
   constructor(public api: ApiService) {}
 
   ngOnInit() {
-    this.api.getApi().subscribe((result) => {
-      console.log('result');
-      console.log(result);
-      // console.log(result['articles'])
-      this.newsData = result['articles'];
-      console.log(this.newsData);
-    });
+    // this.api.getApi().subscribe((result) => {
+    //   console.log('result');
+    //   console.log(result);
+    //   // console.log(result['articles'])
+    //   this.newsData = result['articles'];
+    //   console.log(this.newsData);
+    // });
   }
 }
