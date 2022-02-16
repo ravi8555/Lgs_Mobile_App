@@ -1,19 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
-
 @Component({
-  selector: 'app-media',
-  templateUrl: './media.page.html',
-  styleUrls: ['./media.page.scss'],
+  selector: 'app-blog',
+  templateUrl: './blog.page.html',
+  styleUrls: ['./blog.page.scss'],
 })
-export class MediaPage implements OnInit {
-  // router: any;
-  public categoryType: any;
+export class BlogPage implements OnInit {
+  public categoryType= ["HOME", "PPC", "SEO", "SMO", "PROGRAMMATIC", "DIGITAL ADVERTISING", "DIGITAL MARKETING", "NEWS", "CEO'S DESK",  "OTHERS"];
   constructor(private router: Router) { }
-  ngOnInit() {
-    this.categoryType = ["HOME", "PPC", "SEO", "SMO", "PROGRAMMATIC", "DIGITAL ADVERTISING", "DIGITAL MARKETING", "NEWS", "CEO'S DESK",  "OTHERS"];
-    // 
 
+  ngOnInit() {
   }
   gotoIndivPage(item){
     console.log("click")
@@ -27,5 +23,4 @@ export class MediaPage implements OnInit {
     console.log("cat")
     console.log(cat)
   }
-
 }

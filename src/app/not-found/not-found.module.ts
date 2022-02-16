@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DataInsidePageRoutingModule } from './data-inside-routing.module';
+import { NotFoundPageRoutingModule } from './not-found-routing.module';
 
-import { DataInsidePage } from './data-inside.page';
+import { NotFoundPage } from './not-found.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DataInsidePageRoutingModule
+    NotFoundPageRoutingModule
   ],
-  declarations: [DataInsidePage]
+  declarations: [NotFoundPage]
 })
-export class DataInsidePageModule {}
+export class NotFoundPageModule {}
