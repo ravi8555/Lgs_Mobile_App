@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 // extrarnal module
 
 import { SwiperModule } from 'swiper/angular';
+import { DownloadDirective } from './_directive/download.directive';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

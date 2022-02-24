@@ -1,0 +1,58 @@
+.webinar{
+  .title-container{
+    background-image: url('./../../assets/images/webinar-banner.jpg');
+    height: 340px;
+    background-position: center;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content{
+      h1{
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 80px;
+          height: 4px;
+          display: block;
+          position: absolute;
+          bottom: -20px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          background: #f15b25;
+        }
+      }
+      p{
+        color: #fff;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 500;
+      }
+    }
+  }
+  .card-container{
+    background-image: url('./../../assets/images/ldtv-bg-2.jpg');
+    height: auto;
+    background-position: left;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 12px;
+    .indiv-card{
+      margin-bottom: 24px;
+    }
+    .card-link{
+      text-decoration: none;
+    }
+    .title{
+      text-decoration: none;
+    }
+  }
+}

@@ -6,7 +6,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./news.page.scss'],
 })
 export class NewsPage implements OnInit {
-  public newsData: any;
+  public newsData: any[] = [];
   items: any[] = [];
   rotateImg = 0;
   

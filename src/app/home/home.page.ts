@@ -114,12 +114,12 @@ export class HomePage implements OnInit {
   constructor(public api: ApiService) {}
 
   ngOnInit() {
-    // this.api.getApi().subscribe((result) => {
-    //   console.log('result');
-    //   console.log(result);
-    //   // console.log(result['articles'])
-    //   this.newsData = result['articles'];
-    //   console.log(this.newsData);
-    // });
+    this.api.test().subscribe((result) => {
+      console.log('result');
+      console.log(result);
+      // console.log(result['articles'])
+      // this.newsData = result['articles'];
+      // console.log(this.newsData);
+    });
   }
 }

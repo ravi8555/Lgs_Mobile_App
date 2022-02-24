@@ -7,6 +7,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="webinar">
+  <div class="title-container">
+    <div class="container">
+      <div class="content">
+        <h1><span>Logicserve Masterclass</span></h1>
+        <p>Webinar Series - 1</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <!-- {{Webinars}} -->
+    <ion-card class="indiv-card" *ngFor="let web of Webinars; index as i">
+      <a class="card-link" [download]="web.link" [href]="web.link" [attr.disabled]="dwld.busy" #dwld="wmDownload">
+        <ion-img [src]="web.img"></ion-img>
+        <ion-card-header>
+          <ion-card-title class="title">{{web.title}}</ion-card-title>
+        </ion-card-header>
+      </a>
+    </ion-card>
+  </div>
 </ion-content>
